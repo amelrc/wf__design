@@ -84,9 +84,9 @@ body {
     margin-bottom: -70px;
 }
 
-.items {
-    margin: 10px 0;
-}
+// .items {
+//     margin: 10px 0;
+// }
 
 .items--title {
     font-size: 4.4vw;
@@ -107,35 +107,34 @@ body {
     margin: 0;
 }
 
-.wrapper {
-    display: flex;
+// section 1
+
+.container--space {
+    padding: 160px 0 60px;
     flex-direction: column;
     align-items: center;
 }
 
-.items--heading {
+.item-heading {
     font-size: 34px;
     font-weight: 100;
     margin: 0;
 }
 
-.items--dash {
+.item-dash {
     border: 1px solid $purple;
     width: 5%;
+    margin-top: 40px;
 }
 
-.items--text {
-    width: 40%;
+.item-text {
+    width: 50%;
     text-align: center;
     line-height: 32px;
     margin: 40px;
 }
 
-.box {
-    display:flex;
-    margin: 40px 10%;
-
-}
+//section 2
 
 .card {
     display: flex;
@@ -172,12 +171,14 @@ body {
 .card__text {
     text-align: center;
     line-height: 32px;
-    width: 70%
+    width: 70%;
+    margin-top: 10px;
 }
 
 .button {
     display: flex;
     justify-content: center;
+    margin: 60px 0;
 }
 
 .btn--single {
@@ -187,9 +188,34 @@ body {
     margin: 20px;
 }
 
+
+//section 3
+
+.slide {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+
+.slide__quote {
+    width: 40%;
+}
+
+.slide__color {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    background: $purple;
+}
+
+.quote {
+    
+}
+
 .quote__itself {
-    width: 400px;
+    width: 80%;
     margin-left: -100px;
+    margin-top: -100px;
 }
 
 .element {
@@ -199,7 +225,9 @@ body {
 .element--arrows {
     flex-direction: column;
     width: 20%;
+    margin-left: 100px;
 }
+
 .arrows {
     display: flex;
     margin: 30px 0;
@@ -215,12 +243,15 @@ body {
     padding: 0 10px;
 }
 
+
+
 .card--horizontal{
     width: 25%;
     flex-wrap: wrap;
     padding: 20px;
     box-shadow: 0px 21px 102px 0px rgba(221,221,225,1);
     margin: 0 20px;
+    background: red;
 }
 
 .circle {
@@ -239,4 +270,63 @@ body {
 
 .containerrr__text {
     margin: 0;
+}
+
+.slide__element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//second card section
+
+.bg-lighter {
+    background: $lighterpurple;
+    width: 100%;
+}
+.bg-light {
+    background: $lightpurple;
+    width: 100%;
+}
+.bg-medium {
+    background: $mediumpurple;
+    width: 100%;
+}
+.bg-purple {
+    background: $purple;
+    width: 100%;
+}
+.heading {    
+    justify-content: center;
+    display: flex;
+}
+//footer
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: $darkerpurple;
+}
+.top {
+    display: flex;
+}
+
+.bottom {
+
+}
+
+.top__left {
+    margin: 0;
+    width: 50%;
+}
+.frontmac {
+    width: 100%;
+    margin-top: -50px;
+}
+
+.top__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
 }
