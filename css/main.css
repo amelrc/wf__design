@@ -306,4 +306,6 @@ body {
   .slide__cards {
     left: 185px; }
   .top__right {
-    padding: 0; } }
+    padding: 0; }
+  .items-title-footer {
+    width: 80%; } }
