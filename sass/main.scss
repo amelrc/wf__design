@@ -58,11 +58,9 @@ body {
 }
 
 .nav {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 0;
-    margin: 0 10%;
 }
 
 .list {
@@ -76,7 +74,6 @@ body {
 .container {
     display: flex;
     margin: 0 10%;
-    justify-content: center;
     &__heading {
         margin-bottom: 140px;
     display: flex;
@@ -256,6 +253,9 @@ body {
         position: absolute;
         top: 190px;
         left: 310px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -307,11 +307,6 @@ body {
     line-height: 32px;
 }
 
-.slide__cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .heading {    
     justify-content: center;
     display: flex;
@@ -359,4 +354,23 @@ body {
 
 .item-dash-footer {
     margin-top: 0;
+}
+
+// media query
+
+@media screen and (max-width: 950px){
+
+    .nav {   
+        flex-direction: column;
+    }
+    .logo {
+        margin: 0;
+    }
+    .slide__cards {
+        left: 185px;
+    }
+    .top__right {
+        padding: 0;
+    }
+
 }

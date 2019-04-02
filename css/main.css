@@ -54,11 +54,9 @@ body {
     width: 100%; }
 
 .nav {
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0;
-  margin: 0 10%; }
+  padding: 40px 0; }
 
 .list {
   display: flex;
@@ -68,8 +66,7 @@ body {
 
 .container {
   display: flex;
-  margin: 0 10%;
-  justify-content: center; }
+  margin: 0 10%; }
   .container__heading {
     margin-bottom: 140px;
     display: flex;
@@ -217,7 +214,10 @@ body {
   .slide__cards {
     position: absolute;
     top: 190px;
-    left: 310px; }
+    left: 310px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
 .quote__itself {
   width: 80%;
@@ -258,11 +258,6 @@ body {
   margin: 10px;
   line-height: 32px; }
 
-.slide__cards {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
 .heading {
   justify-content: center;
   display: flex;
@@ -302,3 +297,13 @@ body {
 
 .item-dash-footer {
   margin-top: 0; }
+
+@media screen and (max-width: 950px) {
+  .nav {
+    flex-direction: column; }
+  .logo {
+    margin: 0; }
+  .slide__cards {
+    left: 185px; }
+  .top__right {
+    padding: 0; } }
