@@ -6,6 +6,7 @@ body {
     padding: 0;
     margin: 0;
     color: $lightpurple;
+    overflow-x: hidden;
 }
 
 .btn {
@@ -17,12 +18,6 @@ body {
         @include button;
         color: $purple;
         border: 2px solid $lighterpurple;
-        &:hover {
-            @include button;
-            border: 2px solid $purple;
-            color: white;
-            background: $purple;  
-        }
     }
     &--single {
         font-weight: normal;
@@ -44,6 +39,22 @@ body {
 
 .bg {
     background: $darkerpurple;
+    &--lighter {
+        background: $lighterpurple;
+        width: 100%;
+    }
+    &--light {
+        background: $lightpurple;
+        width: 100%;
+    }
+    &--medium {
+        background: $mediumpurple;
+        width: 100%;
+    }
+    &--purple {
+        background: #626375;
+        width: 100%;
+    }
 }
 
 .nav {
@@ -94,6 +105,9 @@ body {
         flex-direction: column;
         align-items: center;
         padding-bottom: 200px;
+    }
+    &--margin-sapce {
+        padding: 160px 10% 160px;
     }
 }
 
@@ -152,6 +166,7 @@ body {
     align-items: center;
     &--vertical {
         flex-direction: column;
+        padding-bottom: 20px;
     }
     &__number {
         background-image: linear-gradient(to bottom, $lighterpurple, white);
@@ -172,8 +187,8 @@ body {
     &__text {
         text-align: center;
         line-height: 32px;
-        width: 70%;
-        margin-top: 10px;
+        // margin-top: 10px;
+        padding: 0 40px;
     }
     &--horizontal{
         width: 350px;
@@ -183,6 +198,29 @@ body {
         margin: 0 20px;
         background: white;
     }
+    &--hover {
+        &:hover {
+            margin-top: -42px;
+            box-shadow: 0px 21px 102px 0px #dddde1;
+            .hidden {
+                display: block;
+            }
+            .btn--border {
+                @include button;
+                border: 2px solid $purple;
+                color: white;
+                background: $purple; 
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 23px;
 }
 
 .icon {
@@ -264,7 +302,7 @@ body {
         margin: 0;
     }
 }
-.texto {
+.text-card {
     margin: 10px;
     line-height: 32px;
 }
@@ -274,36 +312,15 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-//second card section
-
-.bg-lighter {
-    background: $lighterpurple;
-    width: 100%;
-}
-.bg-light {
-    background: $lightpurple;
-    width: 100%;
-}
-.bg-medium {
-    background: $mediumpurple;
-    width: 100%;
-}
-.bg-purple {
-    background: $purple;
-    width: 100%;
-}
 .heading {    
     justify-content: center;
     display: flex;
     margin: 20px 0;
 }
-//footer
 
 .footer {
     display: flex;
     flex-direction: column;
-    background: $darkerpurple;
     margin-top: 200px;
 }
 
