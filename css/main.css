@@ -2,7 +2,9 @@ body {
   font-family: 'PT Sans', sans-serif;
   padding: 0;
   margin: 0;
-  color: #999AA5;
+  color: #999AA5; }
+
+.body {
   overflow-x: hidden; }
 
 .hamburger {
@@ -36,7 +38,8 @@ body {
     outline: none;
     cursor: pointer;
     color: #555669;
-    border: 2px solid #DDDDE1; }
+    border: 2px solid #DDDDE1;
+    background: transparent; }
   .btn--single {
     font-weight: normal;
     font-size: 14px;
