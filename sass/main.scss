@@ -9,6 +9,21 @@ body {
     overflow-x: hidden;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    &__item {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: $purple;
+        border-radius: 3px;
+    }
+}
+
 .btn {
     @include button;
     color: white;
@@ -115,48 +130,49 @@ body {
     margin-bottom: -70px;
 }
 
-.items-title {
-    font-size: 4.4vw;
-    font-weight: 100;
-    margin: 0;
+.items{
+    &-title {
+        font-size: 4.4vw;
+        font-weight: 100;
+        margin: 0;
+    }
+    &-subtitle {
+        line-height: 32px;
+        width: 84%;
+        margin: 20px 0;
+    }
+    &-btn {
+        font-weight: normal;
+        font-size: 14px;
+        max-width: fit-content;
+        margin: 0;
+    }
+    &-title-footer {
+        font-size: 32px;
+        width: 45%;
+        margin: 20px 0;
+    }
 }
 
-.items-subtitle {
-    line-height: 32px;
-    width: 84%;
-    margin: 0;
+.item {
+    &-heading {
+        font-size: 34px;
+        font-weight: 100;
+        margin: 0;
+    }
+    &-dash {
+        border: 1px solid $purple;
+        width: 5%;
+        margin-top: 40px;
+    }
+    &-text {
+        width: 50%;
+        text-align: center;
+        line-height: 32px;
+        margin: 40px;
+    }
 }
 
-.items-btn {
-    font-weight: normal;
-    font-size: 14px;
-    max-width: fit-content;
-    margin: 0;
-}
-
-.item-heading {
-    font-size: 34px;
-    font-weight: 100;
-    margin: 0;
-}
-
-.item-dash {
-    border: 1px solid $purple;
-    width: 5%;
-    margin-top: 40px;
-}
-
-.item-text {
-    width: 50%;
-    text-align: center;
-    line-height: 32px;
-    margin: 40px;
-}
-
-.items-title-footer {
-    font-size: 32px;
-    width: 45%;
-}
 
 .card {
     display: flex;
@@ -164,6 +180,7 @@ body {
     &--vertical {
         flex-direction: column;
         padding-bottom: 20px;
+        width: 100%;
     }
     &__number {
         background-image: linear-gradient(to bottom, $lighterpurple, white);
@@ -184,7 +201,6 @@ body {
     &__text {
         text-align: center;
         line-height: 32px;
-        // margin-top: 10px;
         padding: 0 40px;
     }
     &--horizontal{
@@ -265,14 +281,14 @@ body {
     margin-top: -100px;
 }
 
-.element {
-    display: flex;
-    margin-left: 170px;
-    &--arrows {
+.element--arrows {
         flex-direction: column;
         width: 20%;
         margin-left: 100px;
-    }
+}
+.cards {
+    display: flex;
+    margin-left: 170px;
 }
 
 .arrows {
@@ -348,12 +364,14 @@ body {
 }
 
 .frontmac {
-    width: 100%;
-    margin-top: -50px;
+    width: 170%;
+    margin-top: -80px;
+    margin-left: -70%;
 }
 
 .item-dash-footer {
     margin-top: 0;
+    margin: 20px 0;
 }
 
 // media query
@@ -362,18 +380,205 @@ body {
 
     .nav {   
         flex-direction: column;
+        align-items: flex-start;
     }
+
+    .mobile {
+        width: 100%;
+    }
+
+    .list {
+        padding: 0;
+        margin: 20px 0 80px;
+        width: 100%;
+        justify-content: space-between;
+        &__item {
+            padding-left: 0;
+        }
+    }
+    
     .logo {
         margin: 0;
     }
-    .slide__cards {
-        left: 185px;
+
+    .image {
+        margin-right: 0;
     }
-    .top__right {
-        padding: 0;
-    }
+
     .items-title-footer {
         width: 80%;
     }
+    .item-text {
+        width: 70%;
+    }
+    
+    .container--cards-vertical {
+        flex-flow: wrap;
+    }
+    
+    .card{
+        margin-left: 0;
+        &--vertical {
+            padding-bottom: 40px;
+            width: 50%;
+        }
+        &__text {
+            padding: 0;
+        }
+        &__text--small {
+            padding: 0 40px;
+        }
+    }
+    
+    .container--cards {
+        flex-wrap: wrap;
+    }
 
+    .slide {
+        &__cards {
+            left: 90px;
+            top: 270px;
+        }
+        &__arrows {
+            top: 0;
+        }
+    }
+
+    .top__right {
+        padding: 100px 0;
+    }
+    .cards {
+        margin-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 650px){
+    
+    .nav {
+        flex-direction: row;
+    }
+
+    .mobile {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -27px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+        &__heading {
+            margin-bottom: 0;
+        }
+        &__image {
+                margin-left: 0;
+        }
+        &--cards-vertical {
+            align-content: center;
+        }
+        .card--vertical {
+            width: 100%;
+        }
+    }
+
+    .items-title {
+        margin: 30px 0;
+    }
+
+    .items-subtitle {
+        margin: 20px 0 40px;
+    }
+    .slide {
+        flex-direction: column;
+        &__quote {
+            width: 70%;
+        }
+        &__color {
+            width: 90%;
+            height: 400px;
+            align-self: flex-end;
+            margin-top: 30px;
+        }
+        &__cards {
+            top: 310px;
+        }
+    }
+    
+    .cards {
+        margin-left: 0;
+    }
+
+    .top {
+        flex-direction: column;
+        &__right {
+            width: 80%;
+            align-self: center;
+        }
+    }   
+}
+
+@media screen and (max-width: 320px){
+    .items {
+        &-title {
+            font-size: 2rem;
+        }
+        &-btn {
+            font-size: 13px;
+        }
+    }
+    .btn--single {
+        font-size: 13px;
+    }
+    .image {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .quote__itself {
+        width: 100%;
+    }
+    .slide {
+        &__quote {
+            width: 100%;
+        }
+        &__color {
+            width: 95%;
+            height: 300px;
+            margin-top: 60px;
+        }
+        &__cards {
+            top: 260px;
+            left: 0px;
+        }
+    }
+    
+    .cards {
+        margin-left: 9px;
+    }
+    .card--horizontal {
+        width: 260px;
+    }
+    .circle {
+        width: 30px;
+    }
+    .text-card {
+        line-height: 20px;
+        font-size: 12px;
+    }
+    .bottom__elements {
+        justify-content: space-evenly;
+    }
+    .logo-footer {
+        margin: 0;  
+    }
+    .top__left {
+        width: 70%;
+    }
 }
